@@ -1,0 +1,23 @@
+---
+title: "Coursera_DevelopingDataProducts_Assginment2"
+author: "WENCAI"
+date: "15 Mai 2019"
+output: 
+  html_document: 
+    keep_md: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## use the leaflet package to radomly plot the locations in my city
+
+```{r pressure, echo=TRUE}
+library(leaflet)
+set.seed(2019-05-14)
+df<-data.frame(lat=runif(20,min=50.90,max=51.00),lng=runif(20,min=6.90,max=7.00))
+leaflet()%>%addTiles()%>%addMarkers(lat=df$lat,lng=df$lng)
+```
+
+So pretty cool with leaflet!
